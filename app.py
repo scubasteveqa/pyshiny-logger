@@ -16,11 +16,11 @@ app_ui = ui.page_fluid(
 
 def server(input, output, session):
     def cmd_output():
-    cmd=input.cmd()
-    try:
-        return subprocess.check_output(cmd, shell=True).decode()
-    except Exception as e:
-        return f"Error: {e}"
+        cmd=input.cmd()
+        try:
+            return subprocess.check_output(cmd, shell=True).decode()
+        except Exception as e:
+            return f"Error: {e}"
 
     @render.text()
     @reactive.event(input.log_button)
