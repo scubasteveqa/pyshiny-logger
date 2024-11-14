@@ -1,5 +1,4 @@
 import multiprocessing
-import pandas as pd
 import platform
 import psutil
 import subprocess
